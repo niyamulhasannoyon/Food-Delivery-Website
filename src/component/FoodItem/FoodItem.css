@@ -1,0 +1,111 @@
+/* .food-item{
+    width: 100% ;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #00000015;
+    transition: .3s;
+    animation: fadeIn 1s;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    -webkit-animation: fadeIn 1s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+} */
+.glass {
+    position: relative;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 2rem;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2), 
+                inset 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.glass::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2rem;
+    backdrop-filter: blur(1px);
+    box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+                inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+    opacity: 0.6;
+    z-index: -1;
+    filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+.food-item-image{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -ms-border-radius: 15px 15px 0px 0px;
+    -o-border-radius: 15px 15px 0px 0px;
+}
+
+.food-item-info{
+    padding: 20px;   
+}
+.food-item-name-rating{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.food-item-name-rating p {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.food-item-name-rating img {
+    width: 70px;
+}
+.food-item-description{
+    color: #676767;
+    font-size: 12px;
+}
+.food-item-price{
+    color: tomato;
+    font-size: 22px;
+    font-weight: 500;
+    margin: 10px 0px;
+}
+.food-item-img-container {
+    position: relative;
+}
+.food-item-img-container .add {
+    width: 35px;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.food-item-count{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    border-radius: 50px;
+    background-color: white;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.food-item-count img {
+    width: 30px;
+}
+
+
