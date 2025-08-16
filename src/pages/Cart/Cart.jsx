@@ -54,9 +54,37 @@
             );
             })}
 
-            <div className="cart-total">
+            {/* <div className="cart-total">
             Total: ${totalPrice}
+            </div> */}
+        </div>
+        <div className="cart-bottom">
+            <div className="cart-total">
+            <h2>Cart Total</h2>
+            <div className="cart-total-details">
+                <p>Subtotal</p>
+                <p>{0}</p>
+                </div> <hr />
+            <div className="cart-total-details">
+                <p>Delivery Fee</p>
+                <p>{2}</p>
+                </div> <hr />
+            <div className="cart-total-details">
+                <b>Total</b>
+                <b>{0}</b>
+                </div> <hr />
+                <div className="cart-promoCode">
+            <div>
+                <p>If you have a promo code, Enter it here</p>
+                <div className='cart-promoCode-input'>
+                    <input type="text" placeholder="Enter promo code" />
+                    <button>Apply</button>
+                </div>
             </div>
+        </div>
+            <button className='proceed'>PROCEED TO CHECKOUT</button>
+        </div>
+            
         </div>
         </div>
     );
