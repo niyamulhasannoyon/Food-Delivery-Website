@@ -16,23 +16,23 @@ const StoreContextProvider = (props) => {
     }));
 }
 
-const removeFromCart = (itemId) => {
-    setCartItems(prev => {
-        if (!prev[itemId]) return prev; // nothing to remove
-        const updated = { ...prev };
-        if (updated[itemId] === 1) delete updated[itemId]; // remove item if count is 1
-        else updated[itemId] -= 1;
-        return updated;
-    });
-}
-
     const contextValue = {
-        food_list, 
+        food_list,
         cartItems, 
         setCartItems, 
-        addToCart, 
-        removeFromCart
+        addToCart
     }
+    
+    // const getTotalCaartPrice = () => {
+    //     let totalAmount = 0;
+    //     for (const itemId in cartItems) {
+    //         const item = food_list.find(food => food._id === itemId);
+    //         if (item) {
+    //             totalAmount += item.price * cartItems[itemId];
+    //         }
+    //     }
+    //     return totalAmount;
+    // }
 
     useEffect(() => {
         

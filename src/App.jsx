@@ -1,28 +1,38 @@
-import React, { useState } from 'react'
-import Navbar from './component/Navbar/Navbar'
-import { Routes, Route } from 'react-router-dom'
-import Cart from './pages/Cart/Cart'
-import Home from './pages/Home/Home'
-import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
-import LogInPopup from './component/LogInPopup/LogInPopup';
+import React from 'react';
+import Navbar from './component/Navbar/Navbar';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home/Home';
+import Footer from './component/Footer/Footer';
 
 const App = () => {
-
-  const [showLogin, setShowLogin] = useState(false);
-
   return (
     <>
-    { showLogin ? <LogInPopup setShowLogin={setShowLogin}/> : null }
-    <div className='app'>
-      <Navbar setShowLogin={setShowLogin} />   {/* ✅ Navbar always visible */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cart" element={<Cart />} />
-        <Route path="/order" element={<PlaceOrder />} />
-      </Routes>
-    </div>
+      {/* ✨ Animated Stars Background */}
+      <div className="stars">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <div
+            key={i}
+            className="star"
+            style={{
+              top: `${Math.random() * 100}vh`,
+              left: `${Math.random() * 100}vw`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Main Content */}
+      <div className="app">
+        <Navbar />   {/* ✅ Navbar always visible */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </div>
+      {/* ✅ Footer outside app div */}
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

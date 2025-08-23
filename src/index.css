@@ -7,9 +7,44 @@
   font-family: Outfit;
   scroll-behavior: smooth;
 }
-body{
-  min-height: 100vh;
+/* Body Background */
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at bottom, #1a1a1a 0%, #0d0d0d 100%);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
+
+/* Stars Effect */
+.stars {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 2s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+/* Twinkle Animation */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.5); }
+}
+
+
 a{
   text-decoration: none;
   color: inherit;
